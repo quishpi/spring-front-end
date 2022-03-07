@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="sbrExperiencia" pageWidth="355" pageHeight="842" columnWidth="335" leftMargin="10" rightMargin="10" topMargin="10" bottomMargin="10" uuid="c2157be6-ca61-414e-86bf-8ac8b353d482">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="fechaInicio" class="java.time.LocalDate"/>
+	<field name="fechaFin" class="java.lang.String"/>
+	<field name="puesto" class="java.lang.String"/>
+	<field name="cargo" class="java.lang.String"/>
+	<field name="institucion" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="50" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="0" y="10" width="335" height="36" forecolor="#034C99" uuid="876e39e4-fdaa-4067-b902-0fb9f4d87fab">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Experiencia]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="0" width="335" height="3" backcolor="#FF7A05" uuid="62ee9313-c90c-449e-893f-90b28aafc7a8">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+		</band>
+	</title>
+	<detail>
+		<band height="63" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="335" height="15" forecolor="#000000" uuid="1848dbe9-0eef-4576-99af-1ca4c07415b3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fechaInicio}.toString() + " - " + $F{fechaFin}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="15" width="335" height="40" uuid="3be3e35e-25cc-48fd-a683-ef7327147eb7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{puesto} +  "\n"  + $F{cargo} + "\n" + $F{institucion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
