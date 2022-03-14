@@ -25,19 +25,4 @@ public class ConfigureJSF {// implements ServletContextAware {
 		servletRegistrationBean.setLoadOnStartup(1);
 		return servletRegistrationBean;
 	}
-	/*
-	 * @Bean public WebServerFactoryCustomizer<ConfigurableServletWebServerFactory>
-	 * webServerFactoryCustomizer() { return factory ->
-	 * factory.setContextPath("/wiwaclinic"); }
-	 * 
-	 */
-	/*
-	 * @Override public void setServletContext(ServletContext servletContext) { //
-	 * Iniciar el contexto de JSF // http://stackoverflow.com/a/25509937/1199132
-	 * servletContext.setInitParameter("com.sun.faces.forceLoadConfiguration",
-	 * Boolean.TRUE.toString());
-	 * servletContext.setInitParameter("javax.faces.FACELETS_SKIP_COMMENTS",
-	 * "true"); }
-	 */
-
 }
